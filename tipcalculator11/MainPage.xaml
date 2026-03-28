@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tipcalculator11.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <HorizontalStackLayout>
+                <Label
+                    Text="Valor da Refeição"
+                    VerticalTextAlignment="Center"/>
+                <Entry
+                    x:Name="RefeicaoEntry"
+                    Placeholder="Digite aqui o valor da refeição"
+                    Keyboard="Numeric"
+                    WidthRequest="350"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label
+                Text="Porcentagem da Gorjeta"
+                VerticalTextAlignment="Center"/>
+
+                <Entry
+                x:Name="PorcentagemEntry"
+                Placeholder="30"
+                Keyboard="Numeric"
+                WidthRequest="35"/>
+                <Label
+                Text="%"
+                VerticalTextAlignment="Center"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout >
+                <Label
+                Text="Valor da Gorjeta" 
+                VerticalTextAlignment="Center"/>
+
+                <Entry
+                x:Name="GorjetaEntry"
+                Placeholder="Valor da Gorjeta"
+                Keyboard="Numeric"
+                IsEnabled="False"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label
+                Text="Valor da Total"
+                VerticalTextAlignment="Center"/>
+
+                <Entry
+                x:Name="ValorTotalEntry"
+                Placeholder="Valor Total da Refeição"
+                Keyboard="Numeric"
+                IsEnabled="False"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout>
+                <Label
+                Text="Quantidade de pessoas"
+                VerticalTextAlignment="Center"/>
+                <Entry
+                x:Name="QtdPessoasEntry"
+                Placeholder="Valor da Refeição por pessoa"
+                Keyboard="Numeric"/>
+            </HorizontalStackLayout>
+
+            <Label x:Name="rotatingLabel"
+               Text="ROTATING TEXT"
+               FontSize="18"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+            <Slider 
+                Minimum="0"
+                Maximum="100"
+                SemanticProperties.Description="Porcentagem da Gorjeta"
+                ValueChanged="Slider_ValueChanged" 
+                WidthRequest="150"/>
+
+            <Label x:Name="displayLabel"
+               Text="(uninitialized)"
+               HorizontalOptions="Center"
+               VerticalOptions="Center" />
+
+            <Entry
+                x:Name="ValorPorPessoaEntry"
+                Placeholder="Valor da Refeição por pessoa"
+                Keyboard="Numeric"
+                IsEnabled="False"/>
+
+
+            <Button
+                x:Name="CalcularButton"
+                Text="Calcular"
+                SemanticProperties.Hint="Calcula o valor"
+                Clicked="CalcularButton_Clicked"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+
+
+</ContentPage>
